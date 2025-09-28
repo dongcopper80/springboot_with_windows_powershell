@@ -245,7 +245,16 @@ function New-Pom {
 				</testFilesIncluded>
 			  </configuration>
 			</plugin>
-
+		<plugin>
+		  <groupId>org.apache.maven.plugins</groupId>
+		  <artifactId>maven-eclipse-plugin</artifactId>
+		  <version>2.10</version>
+		  <configuration>
+			<downloadSources>true</downloadSources>
+			<downloadJavadocs>true</downloadJavadocs>
+		  </configuration>
+		</plugin>
+	
     </plugins>
   </build>
 </project>
@@ -665,4 +674,4 @@ ENTRYPOINT ["java","-jar","/app/app.jar"]
 "@ | Out-File -Encoding UTF8 "$base\Dockerfile"
 }
 
-Write-Host "✅ Scaffold with Swagger + Bearer Token + Flyway,  Lombok, MapStruct, STOMP, SonarQube, Micrometer Prometheus, Actuator, JMeter, JUnit 5 và JaCoCo coverage complete at $RootDir"
+Write-Host "✅ Scaffold with Swagger + Bearer Token + Flyway,  Lombok, MapStruct, STOMP, SonarQube, Micrometer Prometheus, Actuator, JMeter, Eclipse, JUnit 5 và JaCoCo coverage complete at $RootDir"

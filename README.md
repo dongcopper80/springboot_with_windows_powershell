@@ -8,3 +8,5 @@ mvn clean verify sonar:sonar \
   -Dsonar.login=<your_sonar_token>
   
 
+run mvn eclipse:eclipse to generate eclipse project config
+
